@@ -7,7 +7,7 @@
 - **电话**：187-8860-5564
 - **邮箱**：[2738415526@qq.com](mailto:2738415526@qq.com)
 - **所在城市**：【待补充，如：大连】
-- **GitHub**：[github.com/【你的GitHub用户名】](https://github.com/your-username)
+- **GitHub**：[github.com/lz123880](https://github.com/lz123880)
 
 **个人标签**：本科在读 · 2027 届 ｜ 大数据管理与应用 ｜ Python / SQL
 

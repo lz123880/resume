@@ -2,6 +2,8 @@
 
 单文件静态简历网站：`index.html`（内联 CSS，无需任何构建工具），另附同内容的 Markdown 版本 `resume.md`。
 
+> 已部署线上地址：**https://lz123880.github.io/resume/** ｜ 仓库：**https://github.com/lz123880/resume**
+
 ## 仓库结构
 
 ```
