@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="李政的个人简历 — 大数据管理与应用专业，求职意向：数据分析 / 生产流程优化 / 质量管控">
+<title>李政 · 个人简历</title>
+<style>
+  /* ============ 基础变量 ============ */
+  :root {
+    --header-grad-1: #16337a;
+    --header-grad-2: #1e4bb8;
+    --primary: #1d4ed8;
+    --primary-light: #eaf0fe;
+    --text-main: #1f2937;
+    --text-sub: #6b7280;
+    --bg: #eef1f6;
+    --card-bg: #ffffff;
+    --border: #e5e7eb;
+    --radius: 12px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text-main);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px;
+    margin: -1px; padding: 0; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+  /* ============ 顶部姓名与联系方式 ============ */
+  .site-header {
+    background: linear-gradient(135deg, var(--header-grad-1) 0%, var(--header-grad-2) 100%);
+    color: #fff;
+    padding: 48px 0 40px;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .avatar {
+    width: 108px; height: 108px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 3px solid rgba(255,255,255,0.85);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 34px; font-weight: 600; letter-spacing: 2px;
+    flex-shrink: 0;
+  }
+
+  .profile-name { font-size: 32px; font-weight: 700; letter-spacing: 4px; }
+
+  .profile-intent { margin-top: 4px; font-size: 15px; color: rgba(255,255,255,0.85); }
+
+  .contact-list {
+    list-style: none;
+    display: flex; flex-wrap: wrap; gap: 8px 22px;
+    margin-top: 14px;
+    font-size: 14px;
+  }
+  .contact-list li { display: flex; align-items: center; gap: 6px; }
+  .contact-list a { color: #fff; }
+  .contact-list a:hover { text-decoration: underline; }
+  .icon { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
+
+  .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 999px;
+    padding: 4px 14px;
+    font-size: 13px;
+    color: #fff;
+  }
+
+  /* ============ 主体：桌面双栏 ============ */
+  .layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 28px 0 48px;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+    padding: 24px 26px;
+    margin-bottom: 24px;
+  }
+  .card:last-child { margin-bottom: 0; }
+
+  .card h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    padding-left: 12px;
+    border-left: 4px solid var(--primary);
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+
+  .card h3 { font-size: 15px; font-weight: 600; margin: 14px 0 4px; }
+
+  /* 区块通用 */
+  .item + .item { margin-top: 18px; }
+
+  .item-head {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  }
+  .item-title { font-size: 15px; font-weight: 700; }
+  .item-meta  { font-size: 13px; color: var(--text-sub); white-space: nowrap; }
+
+  .item-sub { font-size: 13px; color: var(--primary); margin-top: 2px; }
+
+  ul.points { list-style: none; margin-top: 6px; }
+  ul.points li {
+    position: relative;
+    padding-left: 16px;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #374151;
+  }
+  ul.points li::before {
+    content: "";
+    position: absolute; left: 2px; top: 0.72em;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--primary);
+  }
+
+  /* 技能分组 */
+  .skill-group + .skill-group { margin-top: 14px; }
+  .skill-group h3 {
+    font-size: 14px; font-weight: 700; color: var(--text-main); margin: 0 0 6px;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 6px;
+    padding: 2px 10px;
+    font-size: 13px;
+  }
+
+  /* 简介段落 */
+  .summary { font-size: 14px; color: #374151; }
+
+  .placeholder { color: #b45309; }
+
+  /* ============ 页脚 ============ */
+  .site-footer {
+    text-align: center;
+    color: var(--text-sub);
+    font-size: 13px;
+    padding: 0 0 32px;
+  }
+
+  /* ============ 响应式：移动端单栏 ============ */
+  @media (max-width: 768px) {
+    .layout { grid-template-columns: 1fr; padding-top: 20px; }
+    .profile { flex-direction: column; text-align: center; gap: 16px; }
+    .contact-list { justify-content: center; }
+    .badge-row { justify-content: center; }
+    .profile-name { font-size: 26px; }
+    .site-header { padding: 36px 0 30px; }
+    .item-head { flex-direction: column; gap: 2px; }
+    .card { padding: 20px 18px; }
+  }
+
+  /* ============ 打印 / 导出 PDF ============ */
+  @media print {
+    @page { size: A4; margin: 12mm; }
+    body { background: #fff; font-size: 12px; }
+    .site-header {
+      background: var(--header-grad-1) !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      padding: 20px 0;
+    }
+    .layout { display: block; padding: 0; }
+    .card {
+      box-shadow: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+      break-inside: avoid;
+    }
+    a { color: inherit; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ 顶部：姓名与联系方式 ============ -->
+<header class="site-header">
+  <div class="wrap">
+    <div class="profile">
+      <div class="avatar" role="img" aria-label="李政的照片占位，请替换为个人照片">李政</div>
+      <div>
+        <h1 class="profile-name">李 政</h1>
+        <p class="profile-intent">求职意向：数据分析 / 生产流程优化 / 质量管控（酒厂数字化方向）</p>
+        <address>
+          <ul class="contact-list">
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+              <a href="tel:18788605564">187-8860-5564</a>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <a href="mailto:2738415526@qq.com">2738415526@qq.com</a>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+              <span>所在城市：<span class="placeholder">【待补充，如：大连】</span></span>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5A10.5 10.5 0 0 0 1.5 12c0 4.6 3 8.6 7.2 10 .5.1.7-.2.7-.5v-1.8c-2.9.6-3.5-1.4-3.5-1.4-.5-1.2-1.2-1.6-1.2-1.6-1-.6.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.5 1.1 3.1.9.1-.7.4-1.1.7-1.4-2.3-.3-4.8-1.2-4.8-5.2 0-1.1.4-2.1 1.1-2.8-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.3 0c2-1.4 2.9-1.1 2.9-1.1.6 1.4.2 2.5.1 2.8.7.7 1.1 1.7 1.1 2.8 0 4-2.5 4.9-4.8 5.2.4.3.7 1 .7 2v2.9c0 .3.2.6.7.5a10.5 10.5 0 0 0 7.2-10A10.5 10.5 0 0 0 12 1.5z"/></svg>
+              <a href="https://github.com/your-username" rel="noopener">github.com/<span class="placeholder">【你的GitHub用户名】</span></a>
+            </li>
+          </ul>
+        </address>
+        <ul class="badge-row" aria-label="个人标签">
+          <li class="badge">🎓 本科在读 · 2027 届</li>
+          <li class="badge">📊 大数据管理与应用</li>
+          <li class="badge">🐍 Python / SQL</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 主体：桌面双栏 / 移动单栏 ============ -->
+<main class="wrap">
+  <div class="layout">
+
+    <!-- ===== 左栏：技能 / 教育 ===== -->
+    <aside class="col-left" aria-label="技能与教育背景">
+
+      <section class="card" aria-labelledby="skills-title">
+        <h2 id="skills-title">技能清单</h2>
+
+        <div class="skill-group">
+          <h3>编程与数据</h3>
+          <ul class="tags">
+            <li class="tag">Python</li>
+            <li class="tag">SQL</li>
+            <li class="tag">数据清洗</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>数据分析与可视化</h3>
+          <ul class="tags">
+            <li class="tag">数据分析</li>
+            <li class="tag">可视化<span class="placeholder">【工具待补充，如 matplotlib / Power BI】</span></li>
+            <li class="tag">Excel</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>通用能力</h3>
+          <ul class="tags">
+            <li class="tag">沟通协调</li>
+            <li class="tag">问题解决</li>
+            <li class="tag">团队协作</li>
+            <li class="tag">成本控制意识</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="edu-title">
+        <h2 id="edu-title">教育背景</h2>
+        <article class="item">
+          <div class="item-head">
+            <span class="item-title">大连财经学院</span>
+            <span class="item-meta">2023.09 – 2027.07</span>
+          </div>
+          <p class="item-sub">大数据管理与应用专业 · 管理学学士（本科在读）</p>
+          <ul class="points">
+            <li>主修课程：<span class="placeholder">【待补充，如：数据库原理、统计学、数据挖掘、管理学等】</span></li>
+            <li>成绩 / 排名：<span class="placeholder">【待补充，如 GPA、年级排名】</span></li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="award-title">
+        <h2 id="award-title">所获奖项</h2>
+        <p class="summary"><span class="placeholder">【待补充：暂无，可补充奖学金、竞赛获奖、相关证书（如计算机等级、数据分析证书）等】</span></p>
+      </section>
+
+    </aside>
+
+    <!-- ===== 右栏：简介 / 经历 / 项目 / 自我评价 ===== -->
+    <div class="col-right" aria-label="个人简介与经历">
+
+      <section class="card" aria-labelledby="intro-title">
+        <h2 id="intro-title">个人简介</h2>
+        <p class="summary">
+          大连财经学院大数据管理与应用专业 2027 届本科生，系统学习 Python、SQL、数据分析与可视化课程，
+          具备数据清洗、处理与分析的扎实基础。希望从事酒厂数据分析、生产流程优化或质量管控相关工作，
+          将数据思维与实际业务结合，助力企业数字化升级。拥有蜜雪冰城门店实践经历，
+          在高强度环境中保持耐心细致，具备良好的服务意识与团队协作能力。
+        </p>
+      </section>
+
+      <section class="card" aria-labelledby="exp-title">
+        <h2 id="exp-title">工作经历</h2>
+
+        <article class="item">
+          <div class="item-head">
+            <span class="item-title">蜜雪冰城 · 门店店员（兼职）</span>
+            <span class="item-meta">2024.07 – 2024.09</span>
+          </div>
+          <ul class="points">
+            <li>负责饮品制作、库存管理、收银与顾客服务的全流程工作，高峰期同时服务
+              <strong><span class="placeholder">【待补充，如：日均 200+】</span></strong> 单订单，保障出餐效率与出品质量。</li>
+            <li>参与门店原材料盘点与订货，通过优化订货量协助减少原材料浪费约 <strong>10%</strong>，提升门店成本控制水平。</li>
+            <li>在高峰期高强度工作中保持良好服务态度，协助提升门店运营效率与顾客满意度
+              <span class="placeholder">【待补充，如有评分/复购等数据可量化】</span>。</li>
+            <li>与店员团队协作完成每日清洁、盘点等标准化流程，锻炼了在快节奏环境下的执行力与沟通协调能力。</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="proj-title">
+        <h2 id="proj-title">项目经历</h2>
+
+        <article class="item">
+          <div class="item-head">
+            <span class="item-title"><span class="placeholder">【项目名称待补充，示例：门店销售数据分析】</span></span>
+            <span class="item-meta"><span class="placeholder">【2025.XX – 2025.XX】</span></span>
+          </div>
+          <p class="item-sub">技术栈：Python（pandas / matplotlib）· SQL · Excel</p>
+          <ul class="points">
+            <li>使用 Python 对 <span class="placeholder">【数据规模，如：1 万+ 条】</span> 销售数据进行清洗与分析，
+              识别 <span class="placeholder">【结论，如： TOP 5 畅销品类与滞销品类】</span>。</li>
+            <li>通过可视化图表输出分析报告，为 <span class="placeholder">【对象，如：门店订货】</span> 提供数据支持。</li>
+            <li>项目链接：<span class="placeholder">【待补充，如 GitHub 仓库 / 报告链接】</span></li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="item-head">
+            <span class="item-title"><span class="placeholder">【项目名称待补充，示例：数据库课程设计】</span></span>
+            <span class="item-meta"><span class="placeholder">【2024.XX – 2024.XX】</span></span>
+          </div>
+          <p class="item-sub">技术栈：SQL · MySQL</p>
+          <ul class="points">
+            <li>设计并实现 <span class="placeholder">【主题，如：图书管理系统】</span> 数据库，
+              完成 <span class="placeholder">【表数量】</span> 张表的结构设计与增删改查功能。</li>
+            <li>项目链接：<span class="placeholder">【待补充】</span></li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="eval-title">
+        <h2 id="eval-title">自我评价</h2>
+        <ul class="points">
+          <li>通过门店团队工作，锻炼了良好的服务意识与沟通协调能力，能够在高强度环境中保持耐心与细致。</li>
+          <li>具备扎实的大数据管理与应用专业基础，善于将数据思维应用于实际业务；工作中认真负责，适应能力强。</li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>李政的个人简历 · <a href="resume.md">Markdown 版本</a> · 最后更新：2026-09</p>
+  </div>
+</footer>
+
+</body>
+</html>
